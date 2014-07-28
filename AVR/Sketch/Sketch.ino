@@ -1,15 +1,13 @@
 #include <PN532.h>
+#include <SPI.h>
  
 /*
  * Corrected MISO/MOSI/SCK for Mega from Jonathan Hogg (www.jonathanhogg.com)
  * SS is the same, due to NFC Shield schematic
  */
-#define SS 10
-#define MISO 12
-#define MOSI 11
-#define SCK 13
 
-PN532 nfc(SCK, MISO, MOSI, SS);
+
+PN532 nfc(10);
  
 void setup(void)
 {
